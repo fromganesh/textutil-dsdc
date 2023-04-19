@@ -1,13 +1,13 @@
 import Navbar from "./components/Navbar";
 import Form from "./components/Form";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 import Alert from "./components/Alert";
-import Github from "./components/Github";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import Github from "./components/Github";
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 import { useState } from "react";
@@ -39,19 +39,20 @@ function App() {
 
 
   return (
-  
-  <BrowserRouter>
+  <>
+  {/* <BrowserRouter> */}
     <Navbar  mode={mode} handleMode={handleMode} title="REACT"/>
    <Alert alert={alert}/>
-  <Routes>
+  {/* <Routes> */}
+  <Form mode={mode}/>
   
-  
-   <Route path='/' element={<Form/>}/> 
+   {/* <Route path='/' element={<Form/>}/> 
   <Route path='/card' element={<Card mode={mode}/>}/>
-  <Route path='/git' element={<Github/>}/>
-  </Routes> 
+  <Route path='/git' element={<Github/>}/> */}
+  {/* </Routes>  */}
 
-  </BrowserRouter>
+  {/* </BrowserRouter> */}
+  </>
   );
 }
 

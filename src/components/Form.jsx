@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-export default function Form() {
+export default function Form(props) {
   const [text,setText]= useState("enter text");
   const handleOnChange = (event)=>{
    setText(event.target.value);
@@ -26,7 +26,7 @@ export default function Form() {
 
   }
   return (
-    <div>
+    <div style={{backgroundColor:props.mode === 'dark'?'black':'white',color:props.mode==='dark'?'white':'black'}}>
 <h1>Enter the word</h1>
 <textarea value={text} onChange={handleOnChange} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 <button class="mx-2" onClick={handleUpperCase}>UppweCase</button>
